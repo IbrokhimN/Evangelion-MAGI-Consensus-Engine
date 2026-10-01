@@ -1,0 +1,118 @@
+/* ═══════════════ MAGI // NERV AESTHETIC ═══════════════ */
+
+Screen {
+    background: #050505;
+    color: #ff9d00;
+    layout: vertical;
+}
+
+/* ── Top bar ─────────────────────────────────────────── */
+#topbar {
+    dock: top;
+    height: 3;
+    width: 100%;
+    content-align: center middle;
+    text-align: center;
+    text-style: bold;
+    background: #1a0d00;
+    color: #ff9d00;
+    border: heavy #ff6a00;
+    border-title-color: #ff6a00;
+}
+#topbar.blink-off {
+    color: #3a2000;
+    border: heavy #3a2000;
+    background: #0a0500;
+}
+
+/* ── Prompt input ────────────────────────────────────── */
+#prompt-input {
+    height: 3;
+    margin: 0 1;
+    background: #0a0600;
+    color: #ffb84d;
+    border: tall #ff6a00;
+}
+#prompt-input:focus {
+    border: tall #ff9d00;
+}
+#prompt-input.-disabled, #prompt-input:disabled {
+    border: tall #3a2000;
+    color: #5a3300;
+}
+
+/* ── Council columns ─────────────────────────────────── */
+#council {
+    height: 1fr;
+    margin: 0 1;
+}
+
+AgentPanel {
+    width: 1fr;
+    height: 100%;
+    padding: 0 1;
+    background: #030603;
+    overflow-y: auto;
+}
+AgentPanel .agent-status {
+    height: auto;
+    text-style: bold;
+    margin-bottom: 1;
+}
+AgentPanel .agent-body {
+    height: auto;
+    min-height: 3;
+}
+AgentPanel .agent-vote {
+    height: auto;
+    margin-top: 1;
+    text-style: bold;
+}
+
+/* Melchior: green */
+AgentPanel.melchior {
+    border: double #00ff66;
+    border-title-color: #00ff66;
+    border-subtitle-color: #00b347;
+}
+AgentPanel.melchior > Static { color: #00ff66; }
+
+/* Balthasar: blue */
+AgentPanel.balthasar {
+    border: double #2f8cff;
+    border-title-color: #5aa9ff;
+    border-subtitle-color: #2f8cff;
+    background: #02050a;
+}
+AgentPanel.balthasar > Static { color: #5aa9ff; }
+
+/* Casper: red */
+AgentPanel.casper {
+    border: double #ff2a2a;
+    border-title-color: #ff5555;
+    border-subtitle-color: #ff2a2a;
+    background: #0a0202;
+}
+AgentPanel.casper > Static { color: #ff5555; }
+
+/* ── Consensus panel ─────────────────────────────────── */
+#consensus {
+    height: auto;
+    min-height: 13;
+    margin: 0 1;
+    padding: 0 1;
+    content-align: center middle;
+    text-align: center;
+    background: #0a0600;
+    border: double #ff9d00;
+    border-title-color: #ff9d00;
+    color: #ff9d00;
+}
+#consensus.approve { border: double #00ff66; background: #020a04; }
+#consensus.reject  { border: double #ff2a2a; background: #0a0202; }
+#consensus.nocon   { border: double #ffcc00; background: #0a0800; }
+
+Footer {
+    background: #120900;
+    color: #ff9d00;
+}
